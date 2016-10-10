@@ -9,7 +9,7 @@ $(document).ready(function(){
         //task button
         $("li:last-child").before('<li><input class="complete" type="checkbox"><div class="responsibility">All</div>' + taskItem + '<img class="trash" src="images/trash.png" alt="trash icon"></li>');
         
-        createListeners();
+        //createListeners();
         
     });
     
@@ -20,20 +20,20 @@ $(document).ready(function(){
 function createListeners(){
         
         //off's were added because the click events were stacking
-        $(".trash").off("click");
-        $(".trash").on("click", function(){
+        //$(".trash").off("click");
+        $("ul").on("click",".trash", function(){
         $(this).parent().fadeOut();
         });
         
-        $(".complete").off("click");
-        $(".complete").on("click",function(){
-        $(this).parent().toggleClass('stroked');
+        //$(".complete").off("click");
+        $("ul").on("click", ".complete", function(){
+        $(this).parent().toggleClass('stroked')
         
         });
         
         //this was added to be able to change who is responsible and assign color to select individuals.
-        $(".responsibility").off("click");
-        $(".responsibility").on("click", function(){
+        //$(".responsibility").off("click");
+        $("ul").on("click",".responsibility", function(){
             person = prompt('Who is responsible?');
             $(this).text(person);
             if(person.toLowerCase() == "mom"){
