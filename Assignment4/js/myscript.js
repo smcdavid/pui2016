@@ -22,7 +22,10 @@ $(document).ready(function(){
 function createListeners(){
         
         $("ul").on("click",".trash", function(){
-        $(this).parent().fadeOut();
+			var result = confirm("Are you sure you want to delete");
+        	if(result){
+				$(this).parent().fadeOut();
+			}
         });
         
         $("ul").on("click", ".complete", function(){

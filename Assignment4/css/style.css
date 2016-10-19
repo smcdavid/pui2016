@@ -12,7 +12,7 @@ body {
 }
 
 main{
-    border: black 3px solid;
+    border: black 2px solid;
     border-radius:.2em;
     
 }
@@ -62,7 +62,7 @@ input[type=checkbox]{
 
 .responsibility {
     display:inline;
-    border:solid #000 2px;
+    border:solid #000 1px;
     background-color:black;
     color:white;
     padding:.1em;
